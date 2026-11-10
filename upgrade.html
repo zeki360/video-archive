@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f6f8" />
+    <title>Digital Video Archive — Plan & Billing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="upgrade-page">
+    <header class="upgrade-header">
+      <div class="dashboard-brand">
+        <div class="dashboard-logo-lockup brand-lockup" aria-label="Digital Video Archive">
+          <div class="logo-mark" aria-hidden="true"><span class="reel reel-left"></span><span class="reel reel-right"></span><span class="film-strip"></span></div>
+          <span class="brand-name">Digital<br /><em>Video</em> Archive</span>
+        </div>
+      </div>
+      <nav class="dashboard-nav" aria-label="Main navigation">
+        <button class="dashboard-nav-link" id="place-link" type="button">DVA Place</button>
+        <button class="dashboard-nav-link" id="dvas-link" type="button">DVAs</button>
+        <button class="dashboard-nav-link active" type="button">Upgrade</button>
+      </nav>
+      <div class="dashboard-account">
+        <button class="upload-button" id="upload-button" type="button"><span aria-hidden="true">↥</span> Uploads</button>
+        <input id="upload-input" type="file" accept="video/*" hidden />
+        <div class="account-name"><strong id="upgrade-user-name">Your account</strong><span>VIEWER</span></div>
+        <button class="sign-out-button" id="sign-out-button" type="button"><span aria-hidden="true">↪</span> Sign out</button>
+      </div>
+    </header>
+    <main class="upgrade-main">
+      <h1>Plan &amp; Billing</h1>
+      <p class="upgrade-intro">Manage your Digital Video Archive subscription. Pay monthly, or pay annually and get 2 months free. You can change or cancel at any time.</p>
+      <section class="current-plan-card">
+        <h2>Current plan: <strong>Viewer</strong></h2>
+        <p>Watch DVAs shared with you, share your own, and upload up to 3 DVAs or 12 GB — whichever comes first.</p>
+      </section>
+      <section class="trial-card">
+        <h2>Try Creator free for 20 days</h2>
+        <p>Full access to every feature — projects, unmetered storage, chapters, and FTP. We'll ask for a card so your plan continues without interruption, and it isn't charged until the trial ends — then $29.95 a month.</p>
+        <button class="trial-button" type="button">Start free trial</button>
+      </section>
+      <div class="choose-heading"><h2>Choose a plan</h2><div class="billing-toggle"><button class="active" type="button">Monthly</button><button type="button">Annual <span>2 MONTHS FREE</span></button></div></div>
+      <section class="plan-grid">
+        <article class="plan-card current"><div class="plan-title"><h2>Viewer</h2><span>CURRENT</span></div><h3>Free</h3><ul><li>Watch every DVA shared with you</li><li>Up to 3 DVAs or 12 GB, whichever comes first</li><li>Automatic thumbnails and chapters</li><li>Share DVAs with family and friends</li><li>Connect with other users and use Showcase</li></ul><button class="plan-button disabled" type="button">Your current plan</button></article>
+        <article class="plan-card"><h2>Viewer Plus</h2><h3>$8.95<small>/month</small></h3><p class="annual-price">$89.50 a year if you pay annually</p><ul><li>Everything in Viewer</li><li>100 GB of storage</li><li>No limit on how many DVAs you own</li><li>Automatic thumbnails and chapters</li></ul><button class="plan-button" type="button">Choose Viewer Plus</button></article>
+        <article class="plan-card"><h2>Archiver</h2><h3>$14.95<small>/month</small></h3><p class="annual-price">$149.50 a year if you pay annually</p><ul><li>Everything in Viewer Plus</li><li>300 GB of storage</li><li>Audio DVAs as well as video</li><li>Create and organize Archives</li></ul><button class="plan-button" type="button">Choose Archiver</button></article>
+        <article class="plan-card"><h2>Creator</h2><h3>$29.95<small>/month</small></h3><p class="annual-price">$299.50 a year if you pay annually</p><ul><li>Everything in Archiver</li><li>300 GB of personal storage</li><li>Customer projects and bulk processing</li><li>Review and hand DVAs over to customers</li></ul><button class="plan-button" type="button">Choose Creator</button></article>
+      </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="upgrade.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0c0c0f" />
+    <title>Digital Video Archive — DVA Place</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="dashboard" class="dashboard" aria-label="Digital Video Archive Place">
+      <header class="dashboard-header">
+        <div class="dashboard-brand">
+          <div class="dashboard-logo-lockup brand-lockup" aria-label="Digital Video Archive">
+            <div class="logo-mark" aria-hidden="true">
+              <span class="reel reel-left"></span>
+              <span class="reel reel-right"></span>
+              <span class="film-strip"></span>
+            </div>
+            <span class="brand-name">Digital<br /><em>Video</em> Archive</span>
+          </div>
+          <strong>Digital Video Archive</strong>
+        </div>
+        <nav class="dashboard-nav" aria-label="Main navigation">
+          <button class="dashboard-nav-link active" type="button">DVA Place</button>
+          <button class="dashboard-nav-link" id="dvas-link" type="button">DVAs</button>
+          <button class="dashboard-nav-link" id="upgrade-link" type="button">Upgrade</button>
+        </nav>
+        <div class="dashboard-account">
+          <button class="upload-button" id="upload-button" type="button"><span aria-hidden="true">↥</span> Uploads</button>
+          <input id="upload-input" type="file" accept="video/*" hidden />
+          <span class="upload-status" id="upload-status" role="status"></span>
+          <div class="account-name">
+            <strong id="dashboard-user-name">Your account</strong>
+            <span>VIEWER</span>
+          </div>
+          <button class="sign-out-button" id="sign-out-button" type="button"><span aria-hidden="true">↪</span> Sign out</button>
+        </div>
+      </header>
+      <div class="dashboard-body">
+        <aside class="showcase-sidebar">
+          <div class="showcase-heading">
+            <h2>SHOWCASE</h2>
+            <div>
+              <button class="connections-button" type="button"><span aria-hidden="true">♙</span> Manage Connections</button>
+              <button class="collapse-button" type="button" aria-label="Collapse showcase">‹</button>
+            </div>
+          </div>
+          <label class="activity-search"><span aria-hidden="true">⌕</span><input type="search" placeholder="Search activity..." aria-label="Search activity" /></label>
+          <div class="activity-tabs" role="tablist" aria-label="Showcase filters">
+            <button class="activity-tab active" type="button">All Activity</button>
+            <button class="activity-tab" type="button">Videos</button>
+            <button class="activity-tab" type="button">Posts</button>
+            <button class="activity-tab" type="button">Reactions</button>
+          </div>
+          <button class="share-prompt" type="button">Share something with your Connections...</button>
+          <div class="showcase-empty">
+            <p>Nothing here yet. Showcase fills up as the people you share with add DVAs, post, and react.</p>
+            <button class="manage-link" type="button">Manage Connections →</button>
+          </div>
+        </aside>
+        <section class="dashboard-content" aria-live="polite">
+          <div class="empty-video-state">
+            <div class="video-icon" aria-hidden="true"><span></span></div>
+            <h1>Nothing here yet</h1>
+            <p>Your DVAs will appear here once you upload them, along with<br />anything other people share with you — all ready to watch.</p>
+          </div>
+        </section>
+      </div>
+      <footer class="dashboard-footer">
+        <p>© 2026 Digital Video Archive. All rights reserved. · operated by Home Video Studio Consulting, Inc.</p>
+        <nav aria-label="Dashboard footer navigation">
+          <a href="#privacy">Privacy Policy</a><a href="#terms">Terms of Service</a><a href="mailto:support@digitalvideoarchive.com">Support</a>
+        </nav>
+      </footer>
+    </main>
+    <div class="connections-modal" id="connections-modal" hidden>
+      <div class="connections-backdrop" data-close-connections></div>
+      <section class="connections-dialog" role="dialog" aria-modal="true" aria-labelledby="connections-title">
+        <button class="connections-close" type="button" aria-label="Close connections" data-close-connections>×</button>
+        <p class="modal-eyebrow">YOUR COMMUNITY</p>
+        <h2 id="connections-title">Manage Connections</h2>
+        <p class="connections-intro">Invite people to connect with you and share your Digital Video Archives.</p>
+        <form class="invite-form" id="invite-form">
+          <label for="invite-email">Invite by email</label>
+          <div class="invite-row">
+            <input id="invite-email" type="email" placeholder="friend@example.com" required />
+            <button type="submit">Send invite</button>
+          </div>
+          <p class="invite-feedback" id="invite-feedback" role="status"></p>
+        </form>
+        <div class="connections-list">
+          <h3>Your connections</h3>
+          <p>No connections yet. Send an invite to get started.</p>
+        </div>
+      </section>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="dashboard.js?v=20261111-digitalvideoarchive"></script>
+  </body>
+</html>

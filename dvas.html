@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111116" />
+    <title>Digital Video Archive — DVAs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dvas-page">
+    <main class="dvas-shell" aria-label="Digital Video Archive library">
+      <header class="dvas-header">
+        <div class="dashboard-brand">
+          <div class="dashboard-logo-lockup brand-lockup" aria-label="Digital Video Archive">
+            <div class="logo-mark" aria-hidden="true">
+              <span class="reel reel-left"></span>
+              <span class="reel reel-right"></span>
+              <span class="film-strip"></span>
+            </div>
+            <span class="brand-name">Digital<br /><em>Video</em> Archive</span>
+          </div>
+        </div>
+        <nav class="dashboard-nav" aria-label="Main navigation">
+          <button class="dashboard-nav-link" id="place-link" type="button">DVA Place</button>
+          <button class="dashboard-nav-link active" type="button">DVAs</button>
+          <button class="dashboard-nav-link" id="upgrade-link" type="button">Upgrade</button>
+        </nav>
+        <div class="dashboard-account">
+          <button class="upload-button" id="upload-button" type="button"><span aria-hidden="true">↥</span> Uploads</button>
+          <input id="upload-input" type="file" accept="video/*" hidden />
+          <div class="account-name">
+            <strong id="dvas-user-name">Your account</strong>
+            <span>VIEWER</span>
+          </div>
+          <button class="sign-out-button" id="sign-out-button" type="button"><span aria-hidden="true">↪</span> Sign out</button>
+        </div>
+      </header>
+      <aside class="dvas-archives">
+        <p class="dvas-section-label">ARCHIVES</p>
+        <button class="dvas-library-button" type="button"><span aria-hidden="true">▱</span> Library</button>
+        <div class="dvas-divider"></div>
+        <p class="dvas-empty-copy">No archives yet. Create one to group DVAs — they stay in your Library too.</p>
+      </aside>
+      <section class="dvas-library">
+        <header class="dvas-toolbar">
+          <label class="dvas-search">
+            <span aria-hidden="true">⌕</span>
+            <input type="search" placeholder="Search your library..." aria-label="Search your library" />
+          </label>
+        </header>
+        <div class="dvas-library-heading">
+          <div><h1>LIBRARY</h1><span id="clip-count">0 clips</span></div>
+          <div class="dvas-view-toggle" aria-label="Library view">
+            <button class="active" type="button" aria-label="Grid view">⁙</button>
+            <button type="button" aria-label="List view">☰</button>
+          </div>
+        </div>
+        <div class="dvas-empty-state" id="empty-library">
+          <p>No ready videos yet.</p>
+          <span>Upload and process videos from the Uploads page.</span>
+        </div>
+        <div class="dvas-clip-list" id="clip-list" hidden></div>
+      </section>
+      <aside class="dvas-player">
+        <div class="dvas-player-preview">
+          <div class="dvas-camera-icon" aria-hidden="true"></div>
+          <p>Select a clip to play</p>
+        </div>
+        <div class="dvas-info-tabs" role="tablist">
+          <button class="active" type="button">CLIP INFO</button>
+          <button type="button">CHAPTERS</button>
+          <button type="button">SHARING</button>
+        </div>
+        <p class="dvas-no-selection">No clip selected</p>
+      </aside>
+      <footer class="dvas-footer">
+        <p>© 2026 Digital Video Archive. All rights reserved.</p>
+        <nav aria-label="Footer navigation">
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Service</a>
+          <a href="mailto:support@digitalvideoarchive.com">Support</a>
+        </nav>
+      </footer>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="dvas.js?v=20261111-digitalvideoarchive"></script>
+  </body>
+</html>

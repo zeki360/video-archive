@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fbfaf9" />
+    <title>Digital Video Archive — Sign in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="auth-layout" aria-label="Digital Video Archive account access">
+        <div class="brand-panel">
+          <div class="brand-lockup">
+            <div class="logo-mark" aria-hidden="true">
+              <span class="reel reel-left"></span>
+              <span class="reel reel-right"></span>
+              <span class="film-strip"></span>
+            </div>
+            <span class="brand-name">Digital<br /><em>Video</em> Archive</span>
+          </div>
+          <div class="brand-message">
+            <p class="eyebrow">Your memories, preserved</p>
+            <h1>Every story<br />worth keeping.</h1>
+            <p class="brand-copy">A safe, simple home for the videos that matter most.</p>
+          </div>
+          <div class="film-line" aria-hidden="true"></div>
+          <p class="brand-footnote">Private. Personal. Yours.</p>
+        </div>
+
+        <div class="form-panel">
+          <div class="form-wrap">
+            <div class="mobile-brand brand-lockup">
+              <div class="logo-mark" aria-hidden="true">
+                <span class="reel reel-left"></span>
+                <span class="reel reel-right"></span>
+                <span class="film-strip"></span>
+              </div>
+              <span class="brand-name">Digital<br /><em>Video</em> Archive</span>
+            </div>
+
+            <div class="heading-block">
+              <p class="eyebrow">Welcome back</p>
+              <h2>Sign in</h2>
+              <p>Enter your credentials to continue</p>
+            </div>
+
+            <form id="login-form" novalidate>
+              <label for="email">Email</label>
+              <div class="input-wrap">
+                <span class="input-icon" aria-hidden="true">✉</span>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="you@homevideostudio.com" required />
+              </div>
+              <label for="password">Password</label>
+              <div class="input-wrap">
+                <span class="input-icon" aria-hidden="true">⌑</span>
+                <input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required />
+                <button class="password-toggle" type="button" aria-label="Show password" aria-pressed="false">Show</button>
+              </div>
+              <p class="form-error" id="form-error" role="alert"></p>
+              <button class="submit-button" type="submit">Sign in <span aria-hidden="true">→</span></button>
+              <a class="forgot-link" href="#forgot">Forgot password?</a>
+            </form>
+
+            <p class="signup-copy">New to Digital Video Archive? <a href="#signup">Create an account</a></p>
+
+            <form id="signup-form" class="signup-form" novalidate hidden>
+              <label for="signup-name">Name</label>
+              <div class="input-wrap">
+                <span class="input-icon" aria-hidden="true">✦</span>
+                <input id="signup-name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+              </div>
+              <label for="signup-email">Email</label>
+              <div class="input-wrap">
+                <span class="input-icon" aria-hidden="true">✉</span>
+                <input id="signup-email" name="email" type="email" autocomplete="email" placeholder="you@homevideostudio.com" required />
+              </div>
+              <label for="signup-password">Password</label>
+              <div class="input-wrap">
+                <span class="input-icon" aria-hidden="true">⌑</span>
+                <input id="signup-password" name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" required />
+              </div>
+              <label for="signup-confirm-password">Confirm password</label>
+              <div class="input-wrap">
+                <span class="input-icon" aria-hidden="true">⌑</span>
+                <input id="signup-confirm-password" name="confirm-password" type="password" autocomplete="new-password" placeholder="Enter your password again" required />
+              </div>
+              <p class="form-error" id="signup-error" role="alert"></p>
+              <button class="submit-button" type="submit">Create account <span aria-hidden="true">→</span></button>
+              <button class="back-link" type="button">Already have an account? Sign in</button>
+            </form>
+
+            <a class="legacy-card" href="https://app.digitalvideoarchive.com">
+              <span class="legacy-icon" aria-hidden="true">↗</span>
+              <span><strong>Legacy Digital Video Archive</strong><small>Account created before September 18, 2026?</small><small>Sign in here to access your Digital Video Archive account.</small></span>
+              <span class="legacy-arrow" aria-hidden="true">→</span>
+            </a>
+
+            <p class="invite-note">Invited by someone? Use the link in your invite email.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="help-strip">
+        <div>
+          <p class="help-title">Need Help Signing In?</p>
+          <p>Call the DVA Help Line: <a href="tel:8004691976">800-469-1976</a> <span>or email</span> <a href="mailto:help@digitalvideoarchive.com">help@DigitalVideoArchive.com</a></p>
+        </div>
+        <div class="help-badge" aria-hidden="true">DVA<br /><span>Since 1998</span></div>
+      </section>
+
+      <footer>
+        <p>© 2026 Digital Video Archive. All rights reserved.</p>
+        <nav aria-label="Footer navigation">
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Service</a>
+          <a href="mailto:support@digitalvideoarchive.com">Support</a>
+        </nav>
+      </footer>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
